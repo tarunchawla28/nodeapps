@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:061350173834:task-definition/bgtask"
+        LoadBalancerInfo:
+          ContainerName: "bgcontainer"
+          ContainerPort: 3010
